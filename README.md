@@ -2,7 +2,8 @@
 Springboot 2.x + JPA 实现mysql多数据源
 
 
-*How to use it?
+*How to use it?*
+--
 
 首先我们需要修改resources文件夹下的application.properties中的数据库用户名以及密码，然后运行resources/mysql/init.sql文件。最后启动main方法即可。
 
