@@ -1,7 +1,7 @@
 package com.example.service;
 
-import com.example.model.secondary.User;
-import com.example.repository.secondary.UserRepository;
+import com.example.model2.User;
+import com.example.repository2.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

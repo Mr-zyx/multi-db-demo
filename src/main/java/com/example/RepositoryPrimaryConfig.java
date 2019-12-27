@@ -23,7 +23,7 @@ import java.util.Map;
 @EnableJpaRepositories(
         entityManagerFactoryRef="entityManagerFactoryPrimary",
         transactionManagerRef="transactionManagerPrimary",
-        basePackages= { "com.example.repository.primary" }) //设置Repository所在位置
+        basePackages= { "com.example.repository.**" }) //设置Repository所在位置
 public class RepositoryPrimaryConfig {
     @Autowired
     @Qualifier("primaryDataSource")
@@ -42,7 +42,7 @@ public class RepositoryPrimaryConfig {
         Map<String, Object> properties = hibernateProperties.determineHibernateProperties(
                 jpaProperties.getProperties(), new HibernateSettings());
         return builder.dataSource(primaryDataSource).properties(properties)
-                .packages("com.example.model.primary").build();//实体包路径
+                .packages("com.example.model.**").build();//实体包路径
     }
 
     @Primary

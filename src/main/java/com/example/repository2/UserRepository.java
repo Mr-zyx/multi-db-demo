@@ -1,6 +1,6 @@
-package com.example.repository.secondary;
+package com.example.repository2;
 
-import com.example.model.secondary.User;
+import com.example.model2.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

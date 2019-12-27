@@ -33,6 +33,21 @@ INSERT INTO users (id, account_name)
 VALUES (1, 'xiaoming'),
        (2, 'xiaohong');
 
+CREATE TABLE `schools`
+(
+    `id`   BIGINT UNSIGNED     NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(255) UNIQUE NOT NULL,
+    PRIMARY KEY (id),
+    UNIQUE KEY `uniq_books_by_name` (`name`)
+)
+    ENGINE = InnoDB
+    DEFAULT CHARSET = utf8
+    COLLATE = utf8_unicode_ci;
+
+
+INSERT INTO schools (`id`, `name`)
+values (1, 'No1 school');
+
 
 
 -- Different DB save different data
