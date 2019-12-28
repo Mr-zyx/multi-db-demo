@@ -1,7 +1,8 @@
 package com.example.service;
 
 import com.example.model.secondary.User;
-import com.example.repository.secondary.UserRepository;
+import com.example.repository.UserPrimaryRepository;
+import com.example.repository.secondary.UserSecondaryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,9 +12,16 @@ import java.util.List;
 public class UserService {
 
     @Autowired
-    private UserRepository userRepo;
+    private UserPrimaryRepository userPrimaryRepo;
 
-    public List<User> getAllUsers() {
-        return userRepo.findAll();
+    @Autowired
+    private UserSecondaryRepository userSecondaryRepo;
+
+    public List<User> getPrimaryUsers() {
+        return userPrimaryRepo.findAll();
+    }
+
+    public List<User> getSecondaryUsers() {
+        return userSecondaryRepo.findAll();
     }
 }

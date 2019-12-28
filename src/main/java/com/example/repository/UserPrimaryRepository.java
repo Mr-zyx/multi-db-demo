@@ -1,9 +1,9 @@
 package com.example.repository;
 
-import com.example.model.School;
+import com.example.model.secondary.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface SchoolRepository extends JpaRepository<School, Long> {
+public interface UserPrimaryRepository extends JpaRepository<User, Long> {
 }

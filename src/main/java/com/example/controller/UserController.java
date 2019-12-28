@@ -16,8 +16,13 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("")
-    public List<User> getUsers() {
-        return userService.getAllUsers();
+    @GetMapping("/primary")
+    public List<User> getPrimaryUsers() {
+        return userService.getPrimaryUsers();
+    }
+
+    @GetMapping("/secondary")
+    public List<User> getSecondaryUsers() {
+        return userService.getSecondaryUsers();
     }
 }
