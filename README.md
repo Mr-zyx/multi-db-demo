@@ -10,6 +10,7 @@ Springboot 2.x + JPA 实现mysql多数据源
 API： 
 
 GET localhost:11000/api/users/primary
+
 GET localhost:11000/api/users/secondary
 
 GET localhost:11000/api/books
